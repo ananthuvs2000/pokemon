@@ -2,6 +2,7 @@ import 'package:app/modules/home/login/widgets/button.dart';
 import 'package:app/modules/home/login/widgets/sizedbox.dart';
 import 'package:app/modules/home/login/widgets/text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class OtpConfirmScreen extends StatelessWidget {
   OtpConfirmScreen({super.key});
@@ -23,7 +24,6 @@ class OtpConfirmScreen extends StatelessWidget {
               key: _formKey,
               child: SingleChildScrollView(
                 child: Column(
-                  
                   children: [
                     Text('Enter OTP',
                         style: TextStyle(
@@ -34,19 +34,37 @@ class OtpConfirmScreen extends StatelessWidget {
                             shadows: [
                               BoxShadow(color: Colors.black45, blurRadius: 5),
                             ])),
-                            SizedBox(height: 20,),
-                    Row(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        CustomSizedBox(),
-                        CustomSizedBox(),
-                        CustomSizedBox(),
-                        CustomSizedBox(),
+                        CustomSizedBox(controller: TextEditingController()),
+                        CustomSizedBox(controller: TextEditingController()),
+                        CustomSizedBox(controller: TextEditingController()),
+                        CustomSizedBox(controller: TextEditingController()),
                       ],
                     ),
-                    SizedBox(height: 50,),
-                    PrimaryElevatedButton(onPressed: () {
-                      Navigator.pushNamed(context, '/forgot');
-                    }, label: 'CONFIRM')
+                    SizedBox(
+                      height: 50,
+                    ),
+                    PrimaryElevatedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/forgot');
+                        },
+                        label: 'CONFIRM'),
+                        SizedBox(height: 50,),
+                         TextButton(
+                        onPressed: () {
+                        },
+                        child: Column(
+                          children: [
+                            Text('Resend OTP',
+                                style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w500)),
+                                
+                          ],
+                        ))
                   ],
                 ),
               ),
