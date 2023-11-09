@@ -47,7 +47,7 @@ class ForgotPaswordScreen extends StatelessWidget {
                     Lottie.asset('assets/lotties/login_pekachu.json'),),
                     Row(
                       children: [
-                        Text('Forgot Password',style: TextStyle(fontSize: 36,fontWeight: FontWeight.bold,color: Colors.white,shadows: [
+                        Text('Change Password',style: TextStyle(fontSize: 36,fontWeight: FontWeight.bold,color: Colors.white,shadows: [
                           BoxShadow(
                             color: Colors.black45,
                             blurRadius: 5
@@ -94,11 +94,7 @@ class ForgotPaswordScreen extends StatelessWidget {
                           // _formKey.currentState!.validate();
                           _emailController.clear();
                           _passwordController.clear();
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomePage(),
-                              ));
+                          Navigator.pushNamed(context, '/login');
                         },
                         label: 'CONFIRM',
                       ),

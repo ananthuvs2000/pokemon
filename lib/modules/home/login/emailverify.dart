@@ -83,7 +83,7 @@ class EmailVerifyScreen extends StatelessWidget {
                           // _formKey.currentState!.validate();
                           _emailController.clear();
                           _passwordController.clear();
-                          Navigator.pushNamed(context, '/forgot');
+                          Navigator.pushNamed(context, '/otp');
                         },
                         label: 'VERIFY',
                       ),

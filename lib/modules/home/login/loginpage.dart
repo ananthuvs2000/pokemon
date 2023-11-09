@@ -2,6 +2,7 @@ import 'package:app/modules/home/home_page.dart';
 import 'package:app/modules/home/login/signup_page.dart';
 import 'package:app/modules/home/login/widgets/button.dart';
 import 'package:app/modules/home/login/widgets/colors.dart';
+import 'package:app/modules/home/login/widgets/text.dart';
 import 'package:app/modules/home/login/widgets/textformfield.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 
@@ -105,7 +106,7 @@ class LoginPg extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 10,
                     ),
                     TextButton(
                       onPressed: () {
@@ -116,34 +117,38 @@ class LoginPg extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
-                            color: Colors.white70),
+                            color: Colors.white),
                       ),
                     ),
-                    Container(
-                      height: 1,
-                      width: 150,
-                      color: Colors.white38,
-                    ),
+                    
                     SizedBox(
                       height: 100,
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                     Text(
-                      "Don't have an Account?",
+                      "Create Account",
                       style: TextStyle(
-                          color: Colors.white70,
-                          fontSize: 18,
+                          color: Colors.white,
+                          fontSize: 20,
                           fontWeight: FontWeight.w500),
                     ),
                     TextButton(
                         onPressed: () {
                           Navigator.pushNamed(context, '/signup');
                         },
-                        child: Text('Create account',
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w500)))
+                        child: Column(
+                          children: [
+                            Text('Sign Up',
+                                style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w500)),
+                                Container(
+                                  height: 1,
+                                  width: 75,
+                                  color: Colors.white,
+                                )
+                          ],
+                        ))
                       ],
                     )
                   ],

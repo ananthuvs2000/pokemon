@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TextStyles {
   // Appbar and headings
   static TextStyle appBarHeading = TextStyle(
@@ -10,28 +9,26 @@ class TextStyles {
   );
 
   static TextStyle veryLargeHeading = const TextStyle(
-    fontSize: 36,
-    fontWeight: FontWeight.bold,
-    letterSpacing: -1,
-    color: Colors.white,
+      fontSize: 36,
+      fontWeight: FontWeight.bold,
+      letterSpacing: -1,
+      color: Colors.white,
       shadows: [
-                          BoxShadow(
-                            color: Colors.black45,
-                            blurRadius: 5
-                          ),
-                          
-                        ]
-  );
+        BoxShadow(color: Colors.black45, blurRadius: 5),
+      ]);
 
   static TextStyle mainHeadingStyle = const TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.bold,
-    letterSpacing: -1,
-  );
+      fontSize: 30,
+      fontWeight: FontWeight.bold,
+      letterSpacing: 1,
+      color: Colors.white,
+      shadows: [
+        BoxShadow(color: Colors.black45, blurRadius: 5),
+      ]);
 
   // Labels and plain text
   static TextStyle labelStyle = const TextStyle(
-    fontSize: 15,
+    fontSize: 20,
     fontWeight: FontWeight.w500,
   );
   static TextStyle dynamicFieldLabelStyle = const TextStyle(

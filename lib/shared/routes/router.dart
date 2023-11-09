@@ -1,6 +1,7 @@
 import 'package:app/modules/home/login/emailverify.dart';
 import 'package:app/modules/home/login/forgot_password.dart';
 import 'package:app/modules/home/login/loginpage.dart';
+import 'package:app/modules/home/login/otp_confirm.dart';
 import 'package:app/modules/home/login/signup_page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ abstract class Router {
   static String signup = "/signup";
   static String login = "/login";
   static String verify = "/verify";
+  static String otp = "/otp";
 
 
 
@@ -24,6 +26,8 @@ abstract class Router {
       signup: (context) => SignUpPage(),
       login: (context) => LoginPg(),
       verify: (context) => EmailVerifyScreen(),
+      otp: (context) => OtpConfirmScreen(),
+
 
 
 
